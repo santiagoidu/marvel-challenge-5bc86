@@ -1,0 +1,87 @@
+.Modal
+  position fixed
+  top 0
+  left 0
+  width 100%
+  height 100vh
+  justify-content center
+  align-items center
+  &.active
+    display flex
+  .title
+    margin .3em 0
+    text-transform uppercase
+
+  &-content
+    box-shadow 0 1px 15px rgba(black, .5)
+    padding 1em
+    z-index 3
+    background $blanco
+    margin 1em
+    max-width 700px
+    text-align right
+
+  &-button
+    display inline-block
+    padding 0
+    margin 0
+
+  &-info
+    position relative
+    display flex
+    flex-direction column
+    text-align left
+    margin 0 -1em 2em -1em
+    .extract
+      overflow auto
+      height 250px
+      padding 1em
+      color $blanco
+      z-index 2
+      text-shadow 0 1px 3px #ccc
+      p
+        color $blanco
+    .thumbnail
+      position absolute
+      top 0
+      left 0
+      right 0
+      height 100%
+      z-index 0
+      img
+        width 100%
+        filter blur(1px) grayscale(.2) brightness(.4)
+
+  &-actions
+    display flex
+    text-align center
+    flex-direction column-reverse
+    color red
+    margin 1em -1em -1em
+    a
+      background $gris_mas_claro
+      align-items center
+      display flex
+      justify-content center
+      padding .8em
+      font-weight 700
+      color #333
+      outline none
+      &:before
+        content ''
+        width 30px
+        height 30px
+        background-size cover
+        display inline-block
+        background-image url('../assets/icons/btn-favourites-default.png')
+        margin-right .3em
+      &.buy
+        background $gris_claro
+        color $rojo
+        &:before
+          background-image url('../assets/icons/shopping-cart-primary.png')
+      &.added
+        color $rojo
+        background $negro
+        &:before
+          background-image url('../assets/icons/btn-favourites-primary.png')

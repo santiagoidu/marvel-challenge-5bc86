@@ -1,0 +1,47 @@
+.Favourites
+  position fixed
+  right 0
+  top 0
+  height 100vh
+  overflow auto
+  transform translateX(100%)
+  background $blanco
+  transition transform .4s linear
+  box-shadow 0 1px 2px rgba($negro, .4)
+  z-index 3
+  &.active
+    transform translateX(0%)
+  .title
+    margin .5em .9em
+    text-align center
+    a
+      color inherit
+  > .title
+      display flex
+      justify-content center
+      &:before
+        content ''
+        background-image url('../assets/icons/btn-favourites-primary.png')
+        background-size cover
+        width 30px
+        height 30px
+        margin-right .2em
+  &-list
+    margin 0
+    padding 1em 2em
+    list-style none
+    .item
+      position relative
+      width 216px
+      margin-top 1em
+      margin-bottom 1.5em
+      figure,
+      img
+        width 100%
+
+    .item > .close
+      position absolute
+      top -15px
+      right -15px
+      padding 0
+      margin 0

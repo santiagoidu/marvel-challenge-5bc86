@@ -1,0 +1,32 @@
+@media (min-width 1000px)
+  .Characters
+    &-container
+      display flex
+      flex-wrap wrap
+      justify-content space-between
+  .Card
+    width calc(50% - 2.5em)
+
+  .Modal
+    &-info
+      margin 0
+      flex-direction row
+      padding 0 1em
+      .extract
+        flex 1
+        padding 0 2em
+        height 350px
+        color inherit
+        text-shadow none
+        p
+          color $gris
+      .thumbnail
+        position static
+        width 200px
+        img
+          filter none
+    &-actions
+      flex-direction row
+      a
+        flex 1
+        padding 1em
